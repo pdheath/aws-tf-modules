@@ -1,3 +1,8 @@
+variable enabled {
+  description = "Determine if the resource should be created - don't create by default"
+  type = bool
+  default = false
+}
 variable min_pwd_len {
   description = "Minimum password length"
   type = number

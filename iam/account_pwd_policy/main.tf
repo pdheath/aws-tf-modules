@@ -1,4 +1,5 @@
 resource "aws_iam_account_password_policy" "pwd_pol" {
+  count = var.enabled ? 0 : 1
   minimum_password_length        = var.min_pwd_len
   max_password_age               = var.max_age
   password_reuse_prevention      = var.max_reuse
